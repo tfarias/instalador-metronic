@@ -1,0 +1,144 @@
+
+body {
+    margin: 0 auto;
+    font-size: 12px;
+    padding: 20px 20px 40px;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+table {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+table.sem-borda, table.sem-borda td, table.sem-borda th, table.sem-borda tr {
+    text-align: center;
+    border: 0 !important;
+}
+
+@page {
+    margin-left: .5cm;
+    margin-right: .5cm
+}
+
+.titulo,
+.titulo_neg {
+    font-size: 14px
+}
+
+table td,
+table th {
+    padding-left: 2px;
+    padding-right: 2px
+}
+
+a,
+a:visited {
+    color: #000;
+    text-decoration: none
+}
+
+a:hover {
+    color: #000;
+    text-decoration: underline
+}
+
+a img {
+    border: none
+}
+
+.titulo2, .titulo2_neg {
+    font-size: 13px
+}
+
+.texto_comentario {
+    font-size: 10px;
+    font-weight: 400
+}
+
+.texto_desat {
+    color: #CCC
+}
+
+.texto_red {
+    color: red
+}
+
+table fieldset {
+    border-right: none;
+    border-left: none;
+    border-bottom: none
+}
+
+.tab_internal {
+    border-style: hidden
+}
+
+.tab_internal td, .tab_internal th {
+    border: 1px solid #000
+}
+
+.right {
+    text-align: right
+}
+
+.left {
+    text-align: left
+}
+
+.center {
+    text-align: center
+}
+
+.color_bg {
+    background-color: #cdcdcd
+}
+
+@media screen {
+    .page {
+        font-size: 11px;
+        margin-top: 0;
+    }
+
+    footer {
+        margin-top: 20px;
+        bottom: 0px;
+        text-align: left;
+    }
+
+}
+
+@media print {
+    .nao_imprimir {
+        display: none;
+    }
+}
+
+.header {
+
+}
+
+.header .left {
+    float: left;
+    width: 10%;
+}
+
+.header .right {
+    float: right;
+    width: 10%;
+}
+
+.blocoheader {
+    padding: 15px;
+    background: #EEE;
+    color: #000;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}

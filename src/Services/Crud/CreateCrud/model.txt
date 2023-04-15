@@ -1,0 +1,36 @@
+<?php
+
+namespace [{namespace}]Models;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Bootstrapper\Interfaces\TableInterface;
+[{use_currency}]
+
+class [{tabela_model}] extends BaseModel implements TableInterface
+{
+    use SoftDeletes[{currency}];
+    protected $fillable = ['id',[{fillable}]];
+
+    protected $table = '[{tabela}]';
+    protected $dates = ['deleted_at'[{dates}]];
+
+     public function getTableHeaders()
+        {
+            return [[{table_header}]];
+        }
+
+ /**
+     * Get the value for a given header. Note that this will be the value
+     * passed to any callback functions that are being used.
+     *
+     * @param string $header
+     * @return mixed
+     */
+    public function getValueForHeader($header)
+    {
+        switch ($header){
+            [{table_values}]
+        }
+    }
+
+    [{funcoes}]
+}

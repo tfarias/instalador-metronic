@@ -1,0 +1,65 @@
+{
+    "name": "tfarias/instalador-tfarias",
+    "description": "Instalador de codigos baseado no template metronic",
+    "require": {
+        "kris/laravel-form-builder": "^1",
+        "laracasts/flash": "^3",
+        "laravel/framework": "^6.0|^7.0|^8.0",
+        "patricktalmadge/bootstrapper": "^5",
+        "prettus/l5-repository": "^2",
+        "mpdf/mpdf": "^8.0",
+        "laravel/ui": "^3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tfarias\\InstaladorTfarias\\TfariasInstaladorServiceProvider",
+                "Bootstrapper\\BootstrapperL5ServiceProvider",
+                "Kris\\LaravelFormBuilder\\FormBuilderServiceProvider",
+                "Prettus\\Repository\\Providers\\RepositoryServiceProvider"
+            ],
+            "aliases": {
+                "Accordion": "Bootstrapper\\Facades\\Accordion",
+                "Alert": "Bootstrapper\\Facades\\Alert",
+                "Badge": "Bootstrapper\\Facades\\Badge",
+                "Breadcrumb": "Bootstrapper\\Facades\\Breadcrumb",
+                "Button" : "Bootstrapper\\Facades\\Button",
+                "ButtonGroup" : "Bootstrapper\\Facades\\ButtonGroup",
+                "Carousel" : "Bootstrapper\\Facades\\Carousel",
+                "ControlGroup" : "Bootstrapper\\Facades\\ControlGroup",
+                "DropdownButton" : "Bootstrapper\\Facades\\DropdownButton",
+                "Form" : "Bootstrapper\\Facades\\Form",
+                "Helpers" : "Bootstrapper\\Facades\\Helpers",
+                "Icon" : "Bootstrapper\\Facades\\Icon",
+                "InputGroup" : "Bootstrapper\\Facades\\InputGroup",
+                "Image" : "Bootstrapper\\Facades\\Image",
+                "Label" : "Bootstrapper\\Facades\\Label",
+                "MediaObject" : "Bootstrapper\\Facades\\MediaObject",
+                "Modal" : "Bootstrapper\\Facades\\Modal",
+                "Navbar" : "Bootstrapper\\Facades\\Navbar",
+                "Navigation" : "Bootstrapper\\Facades\\Navigation",
+                "Panel" : "Bootstrapper\\Facades\\Panel",
+                "ProgressBar" : "Bootstrapper\\Facades\\ProgressBar",
+                "Tabbable" : "Bootstrapper\\Facades\\Tabbable",
+                "Table" : "Bootstrapper\\Facades\\Table",
+                "Thumbnail" : "Bootstrapper\\Facades\\Thumbnail",
+                "FormBuilder" : "Kris\\LaravelFormBuilder\\Facades\\FormBuilder",
+                "THelper" : "Tfarias\\InstaladorTfarias\\Helpers\\THelper"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Tfarias\\InstaladorTfarias\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tiago de F S",
+            "email": "tfariasg3@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "version": "1.0"
+}

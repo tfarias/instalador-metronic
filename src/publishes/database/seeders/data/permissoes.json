@@ -1,0 +1,254 @@
+[
+  {
+    "tipo": "Dashboard",
+    "desenv": "N",
+    "acesso_liberado": "S",
+    "slug": "home",
+    "descricao": "Visualizar dashboard"
+  },
+  {
+    "tipo": "Sistema",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "sis_usuario.index",
+    "descricao": "Usuarios - Visualizar os registros"
+  },
+  {
+    "tipo": "Sistema",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "sis_usuario.create",
+    "descricao": "Usuarios - Adicionar um registro"
+  },
+  {
+    "tipo": "Sistema",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "sis_usuario.edit",
+    "descricao": "Usuarios - Alterar um registro"
+  },
+  {
+    "tipo": "Sistema",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "sis_usuario.destroy",
+    "descricao": "Usuarios - Excluir um registro"
+  },
+  {
+    "tipo": "Sistema",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "sis_usuario.fill",
+    "descricao": "Usuarios - Filtrar um registro"
+  },
+  {
+    "tipo": "Sistema",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "sis_usuario.getedit",
+    "descricao": "Usuarios - Filtrar um registro pelo id"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "aux_tipo_usuario.index",
+    "descricao": "Tipo de Usuarios - Visualizar os registros"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "aux_tipo_usuario.create",
+    "descricao": "Tipo de Usuarios - Adicionar um registro"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "aux_tipo_usuario.edit",
+    "descricao": "Tipo de Usuarios - Alterar um registro"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "aux_tipo_usuario.destroy",
+    "descricao": "Tipo de Usuarios - Excluir um registro"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "aux_tipo_usuario.fill",
+    "descricao": "Tipo de Usuarios - Filtrar um registro"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "aux_tipo_usuario.getedit",
+    "descricao": "Tipo de Usuarios - Filtrar um registro pelo id"
+  },
+  {
+    "tipo": "Permissoes",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "rota.index",
+    "descricao": "Rotas - Visualizar os registros"
+  },
+  {
+    "tipo": "Permissoes",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "rota.create",
+    "descricao": "Rotas - Adicionar um registro"
+  },
+  {
+    "tipo": "Permissoes",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "rota.edit",
+    "descricao": "Rotas - Alterar um registro"
+  },
+  {
+    "tipo": "Permissoes",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "rota.destroy",
+    "descricao": "Rotas - Excluir um registro"
+  },
+  {
+    "tipo": "Permissoes",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "rota.fill",
+    "descricao": "Rotas - Filtrar um registro"
+  },
+  {
+    "tipo": "Permissoes",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "rota.getedit",
+    "descricao": "Rotas - Filtrar um registro pelo id"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "tipo_rota.index",
+    "descricao": "Tipo de Rota - Visualizar os registros"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "tipo_rota.create",
+    "descricao": "Tipo de Rota - Adicionar um registro"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "tipo_rota.edit",
+    "descricao": "Tipo de Rota - Alterar um registro"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "tipo_rota.destroy",
+    "descricao": "Tipo de Rota - Excluir um registro"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "tipo_rota.fill",
+    "descricao": "Tipo de Rota - Filtrar um registro"
+  },
+  {
+    "tipo": "Auxiliares",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "tipo_rota.getedit",
+    "descricao": "Tipo de Rota - Filtrar um registro pelo id"
+  },
+  {
+    "tipo": "Usuário",
+    "desenv": "N",
+    "acesso_liberado": "S",
+    "slug": "usuario.alterar_imagem",
+    "descricao": "Alterar imagem pelo usuario"
+  },
+  {
+    "tipo": "Usuário",
+    "desenv": "N",
+    "acesso_liberado": "S",
+    "slug": "usuario.delete_img",
+    "descricao": "Deletar imagem pelo usuario"
+  },
+  {
+    "tipo": "Usuário",
+    "desenv": "N",
+    "acesso_liberado": "S",
+    "slug": "usuario.alterar_senha",
+    "descricao": "Alterar senha pelo usuario"
+  },
+  {
+    "tipo": "Usuário",
+    "desenv": "N",
+    "acesso_liberado": "S",
+    "slug": "usuario.alterar_cadastro",
+    "descricao": "Alterar cadastro pelo usuario"
+  },
+  {
+    "tipo": "Usuário",
+    "desenv": "N",
+    "acesso_liberado": "S",
+    "slug": "usuario.cadastro",
+    "descricao": "Cadastro do usuario"
+  },
+  {
+    "tipo": "Tipo de usuário",
+    "desenv": "S",
+    "acesso_liberado": "N",
+    "slug": "tipo_usuario.index",
+    "descricao": "Visualizar os registros"
+  },
+  {
+    "tipo": "Tipo de usuário",
+    "desenv": "S",
+    "acesso_liberado": "N",
+    "slug": "tipo_usuario.adicionar",
+    "descricao": "Adicionar um registro"
+  },
+  {
+    "tipo": "Tipo de usuário",
+    "desenv": "S",
+    "acesso_liberado": "N",
+    "slug": "tipo_usuario.alterar",
+    "descricao": "Alterar um registro"
+  },
+  {
+    "tipo": "Tipo de usuário",
+    "desenv": "S",
+    "acesso_liberado": "N",
+    "slug": "tipo_usuario.excluir",
+    "descricao": "Excluir um registro"
+  },
+  {
+    "tipo": "Permissoes",
+    "desenv": "N",
+    "acesso_liberado": "N",
+    "slug": "tipo_usuario.gerenciar_permissoes",
+    "descricao": "Gerenciar"
+  },
+  {
+    "tipo": "Permissoes",
+    "desenv": "N",
+    "acesso_liberado": "S",
+    "slug": "tipo_usuario.carregar_permissoes",
+    "descricao": "Carregar permissões de um tipo de usuário"
+  }
+]

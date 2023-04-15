@@ -1,0 +1,139 @@
+<?php
+
+namespace [{namespace}]Http\Controllers;
+
+use [{namespace}]Models\[{tabela_model}];
+use [{namespace}]Repositories\[{tabela_model}]Repository;
+use [{namespace}]Criteria\[{tabela_model}]Criteria;
+use [{namespace}]Forms\[{tabela_model}]Form;
+use Kris\LaravelFormBuilder\Form;
+use Illuminate\Http\Request;
+
+class [{tabela_model}]Controller extends Controller
+{
+
+    private $repository;
+
+    public function __construct([{tabela_model}]Repository $repository)
+    {
+        $this->repository = $repository;
+    }
+
+    /**
+     * Lista todos os registros do sistema.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
+        $filtros = request()->all();
+        $this->repository->pushCriteria(new [{tabela_model}]Criteria($filtros));
+        if (isset($filtros['acao']) && $filtros['acao'] == 'imprimir') {
+            return $this->repository->exportar($filtros);
+        }
+        $dados = $this->repository->paginate();
+        return view('[{tabela}].index', compact('dados', 'filtros'));
+    }
+
+    /**
+         * Show the form for creating a new resource.
+        *
+        * @return \Illuminate\Http\Response
+    */
+    public function create()
+    {
+        $form = \FormBuilder::create([{tabela_model}]Form::class,[
+            'url'=>route('[{tabela}].store'),
+            'method'=>'POST'
+        ]);
+
+        return view('[{tabela}].create',compact('form'));
+
+    }
+
+
+   /**
+       * Store a newly created resource in storage.
+       *
+       * @param  \Illuminate\Http\Request  $request
+       * @return \Illuminate\Http\Response
+       */
+      public function store(Request $request)
+      {
+          /** @var Form $form */
+          $form = \FormBuilder::create([{tabela_model}]Form::class);
+          if(!$form->isValid()){
+              return redirect()
+                  ->back()
+                  ->withErrors($form->getErrors())
+                  ->withInput();
+          }
+          $data = $form->getFieldValues();
+          $this->repository->create($data);
+
+          flash('[{titulo}] criado com sucesso!', 'success');
+
+          return redirect()->route('[{tabela}].index');
+      }
+
+        /**
+        * Show the form for editing the specified resource.
+        *
+        * @param  \[{namespace}]Models\[{tabela_model}] $[{var}]
+        * @return \Illuminate\Http\Response
+        */
+       public function edit([{tabela_model}] $[{var}])
+       {
+           $form = \FormBuilder::create([{tabela_model}]Form::class,[
+               'url'=>route('[{tabela}].update',['[{var}]' => $[{var}]->id]),
+               'method'=>'PUT',
+               'model' => $[{var}]
+           ]);
+
+           return view('[{tabela}].edit',compact('form'));
+       }
+
+
+    /**
+         * Update the specified resource in storage.
+         *
+         * @param  \Illuminate\Http\Request  $request
+         * @param  \[{namespace}]Models\User  $[{var}]
+         * @return \Illuminate\Http\Response
+         */
+        public function update(Request $request, [{tabela_model}] $[{var}])
+        {
+            /** @var Form $form */
+            $form = \FormBuilder::create([{tabela_model}]Form::class,[
+                'data' => ['id' => $[{var}]->id],
+                'model' => $[{var}]
+            ]);
+            if(!$form->isValid()){
+                return redirect()
+                    ->back()
+                    ->withErrors($form->getErrors())
+                    ->withInput();
+            }
+            $data = $form->getFieldValues();
+            $this->repository->update($data,$[{var}]->id);
+            flash('[{titulo}] alterado com sucesso!!', 'success');
+            return redirect()->route('[{tabela}].index');
+        }
+
+
+     /**
+         * Remove the specified resource from storage.
+         *
+         * @param  \[{namespace}]Models\[{tabela_model}] $user
+         * @return \Illuminate\Http\Response
+         */
+        public function destroy($id)
+        {
+            $this->repository->delete($id);
+            flash('[{titulo}] deletado com sucesso!!', 'success');
+
+             return redirect()->route('[{tabela}].index');
+        }
+
+
+}

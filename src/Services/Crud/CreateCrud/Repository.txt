@@ -1,0 +1,17 @@
+<?php
+
+namespace [{namespace}]Repositories;
+
+/**
+ * Interface [{table}]Repository
+ * @package namespace [{namespace}]Repositories;
+ */
+interface [{table}]Repository extends RepositoryInterface
+{
+     /**
+     * Funcao exportar vai gerar as telas em pdf e excel ou json.
+     *
+     * @var $filtros
+     */
+    public function exportar($filtros);
+}

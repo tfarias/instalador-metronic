@@ -1,0 +1,2 @@
+    Route::resource('[{prefix}]', '[{classe}]Controller');
+   //[rota]

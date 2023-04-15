@@ -1,0 +1,1 @@
+<a href="{{ $url }}" class="btn btn-xs btn-warning" title="Editar" toggle="tooltip"><i class="fa fa-pencil-square-o"></i></a>

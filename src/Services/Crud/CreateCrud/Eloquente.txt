@@ -1,0 +1,77 @@
+<?php
+
+namespace [{namespace}]Repositories;
+
+use [{namespace}]Models\[{table}];
+use [{namespace}]Relatorios\RelatorioBase;
+
+/**
+ * Class [{table}]RepositoryEloquent
+ * @package namespace [{namespace}]Repositories;
+ */
+class [{table}]RepositoryEloquent extends BaseRepository implements [{table}]Repository
+{
+
+    /**
+     * Título do relatório.
+     *
+     * @var string
+     */
+    protected $titulo = 'Lista de [{titulo}]';
+
+    /**
+     * Quantidade de itens por página.
+     *
+     * @var int
+     */
+    protected $porPagina = 10;
+
+    /**
+     * A view utilizada para impressão deste relatório.
+     *
+     * @var string
+     */
+    protected $view = 'imprimir';
+
+
+    /**
+    * @var RelatorioBase
+    */
+    private $relatorio;
+
+    /**
+     * Specify Model class name
+     *
+     * @return string
+     */
+    public function model()
+    {
+        return [{table}]::class;
+    }
+
+
+
+    /**
+     * Boot up the repository, pushing criteria
+     */
+    public function boot()
+    {
+        $this->relatorio = app(RelatorioBase::class);
+        $this->pushCriteria(app(RequestCriteria::class));
+    }
+
+
+    /**
+     * Exportar
+     */
+    public function exportar($filtros)
+    {
+        $this->relatorio->setTitulo($this->titulo);
+        $this->relatorio->setDados(parent::all());
+        $this->relatorio->setView($this->view);
+        $this->relatorio->setPorPagina($this->porPagina);
+        $this->relatorio->setRelformato($filtros['relformato']);
+        $this->relatorio->setFiltros($filtros);
+        return $this->relatorio->gerar_relatorio();
+    }
+}

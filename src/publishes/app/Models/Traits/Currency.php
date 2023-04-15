@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models\Traits;
+
+trait Currency
+{
+    public static function getAmount($money)
+    {
+        try {
+            $cleanString = preg_replace('/([^0-9\.,])/i', '', $money);
+            $onlyNumbersString = preg_replace('/([^0-9])/i', '', $money);
+
+            $separatCountErased = strlen($cleanString) - strlen($onlyNumbersString) - 1;
+
+            $stringCommaOrDot = preg_replace('/([,\.])/', '', $cleanString, $separatCountErased);
+            $removedSeparator = preg_replace('/(\.|,)(?=[0-9]{3,}$)/', '', $stringCommaOrDot);
+
+            return (float)str_replace(',', '.', $removedSeparator);
+        } catch (\Exception $e) {
+            return null;
+        }
+    }
+}

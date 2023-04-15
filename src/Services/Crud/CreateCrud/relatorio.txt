@@ -1,0 +1,61 @@
+<?php
+
+namespace [{namespace}]Relatorios;
+
+use [{namespace}]Models\[{tabela_model}];
+
+class [{tabela_model}]Listagem extends RelatorioBase
+{
+
+    /**
+     * Título do relatório.
+     *
+     * @var string
+     */
+    protected $titulo = 'Lista de [{titulo}]';
+
+    /**
+     * Quantidade de itens por página.
+     *
+     * @var int
+     */
+    protected $porPagina = 10;
+
+    /**
+     * A view utilizada para impressão deste relatório.
+     *
+     * @var string
+     */
+    protected $view = '[{tabela}].imprimir';
+
+    public function exportar($filtros){
+        $this->setTitulo($this->titulo);
+        $dados = $this->gerar($filtros, false);
+        $this->setDados($dados);
+        $this->setView($this->view);
+        $this->setPorPagina($this->porPagina);
+        $this->setRelformato($filtros['relformato']);
+        $this->setFiltros($filtros);
+        return $this->gerar_relatorio();
+    }
+    /**
+     * Gera os dados.
+     *
+     * @param array $filtros
+     * @param bool $paginar
+     *
+     * @return mixed
+     */
+    public function gerar($filtros, $paginar = true)
+    {
+        $dados = [{tabela_model}]::orderBy('id', 'ASC');
+
+        [{filtros_if}]
+
+        if ($paginar) {
+            return $dados->paginate($this->porPagina);
+        }
+
+        return $dados->get();
+    }
+}

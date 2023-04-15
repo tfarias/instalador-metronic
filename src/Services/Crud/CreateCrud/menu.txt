@@ -1,0 +1,20 @@
+    @if(THelper::has_permission((['[{route_as}].index'])))
+            <li class="nav-item " id="[{route_as}].index">
+                <a href="javascript:;" class="nav-link nav-toggle">
+                    <i class="icon-list"></i>
+                    <span class="title">[{titulo}]</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+                    @can('[{route_as}].index')
+                        <li class="nav-item  ">
+                            <a href="{{route('[{route_as}].index')}}" class="nav-link ">
+                                <span class="title">[{titulo}]</span>
+                            </a>
+                        </li>
+                    @endcan
+                </ul>
+            </li>
+    @endif
+
+    {{--menu--}}
