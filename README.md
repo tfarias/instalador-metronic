@@ -2,25 +2,9 @@
 
 ## Método de utilização
 
-- Para utilizar o repository deve adicionar no composer.json o repository
 
-- exempo
-
-````bash
-  "require-dev": {
-      "tfarias/instalador-tfarias": "dev-master"
-   }
-   
-  "repositories": [
-        {
-            "url": "https://tfariasg3@bitbucket.org/tfarias-ses/instalador-ses.git",
-            "type": "git"
-        }
-    ]
 ````
--  E executar o comando
-````bash
-composer update --prefer-source
+composer require tfarias/instalador-tfarias
 ````
 
 ## \* Para o funcionamento correto execute o comando abaixo
